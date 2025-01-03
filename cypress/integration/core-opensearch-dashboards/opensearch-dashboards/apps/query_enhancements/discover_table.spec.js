@@ -113,15 +113,6 @@ describe('discover table spec', () => {
     cy.deleteIndex('data_logs_small_time_1');
   });
 
-  beforeEach('DELETE BEFORE COMMITING', () => {
-    cy.navigateToWorkSpaceSpecificPage({
-      url: BASE_PATH,
-      workspaceName: WORKSPACE_NAME,
-      page: 'discover',
-      isEnhancement: true,
-    });
-  });
-
   describe('discover table', () => {
     describe('view surrounding and single document', () => {
       it('index pattern: check links exist', () => {
@@ -134,14 +125,14 @@ describe('discover table spec', () => {
         INDEX_LANGUAGES.forEach((lang) => checkViewDocumentLinksByQueryLanguage(lang));
       });
       it('index pattern: click on links', () => {
-        INDEX_PATTERN_LANGUAGES.slice(0, 2).forEach((lang, index) => openViewDocumentLinksByQueryLanguage(lang, index));
+        INDEX_PATTERN_LANGUAGES.slice(0, 2).forEach((lang, index) =>
+          openViewDocumentLinksByQueryLanguage(lang, index)
+        );
       });
     });
 
-    describe('sort', () => {
-    });
+    describe('sort', () => {});
 
-    describe('expand document', () => {
-    });
+    describe('expand document', () => {});
   });
 });
