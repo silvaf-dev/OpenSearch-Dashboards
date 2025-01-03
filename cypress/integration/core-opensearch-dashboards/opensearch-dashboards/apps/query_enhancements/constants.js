@@ -12,6 +12,9 @@ export const INDEX_PATTERN_NAME = `${DATASOURCE_NAME}::${DEFAULT_TIME_INDEX_PATT
 export const START_TIME = 'Jan 1, 2020 @ 00:00:00.000';
 export const END_TIME = 'Jan 1, 2024 @ 00:00:00.000';
 
+export const INDEX_PATTERN_LANGUAGES = ['DQL', 'Lucene', 'OpenSearch SQL', 'PPL'];
+export const INDEX_LANGUAGES = ['OpenSearch SQL', 'PPL'];
+
 export const DATASET_CONFIGS = {
   index_pattern: {
     type: 'index_pattern',
